@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  webapi:
+    build: .
+    container_name: devops-dotnet-api
+    ports:
+      - "5000:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    restart: unless-stopped
